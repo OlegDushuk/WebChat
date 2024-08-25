@@ -1,0 +1,14 @@
+D:\.NETProjects\WebChat\WebChat.DAL\bin\Debug\net7.0\WebChat.DAL.deps.json
+D:\.NETProjects\WebChat\WebChat.DAL\bin\Debug\net7.0\WebChat.DAL.runtimeconfig.json
+D:\.NETProjects\WebChat\WebChat.DAL\bin\Debug\net7.0\WebChat.DAL.dll
+D:\.NETProjects\WebChat\WebChat.DAL\bin\Debug\net7.0\WebChat.DAL.pdb
+D:\.NETProjects\WebChat\WebChat.DAL\obj\Debug\net7.0\WebChat.DAL.csproj.AssemblyReference.cache
+D:\.NETProjects\WebChat\WebChat.DAL\obj\Debug\net7.0\WebChat.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NETProjects\WebChat\WebChat.DAL\obj\Debug\net7.0\WebChat.DAL.AssemblyInfoInputs.cache
+D:\.NETProjects\WebChat\WebChat.DAL\obj\Debug\net7.0\WebChat.DAL.AssemblyInfo.cs
+D:\.NETProjects\WebChat\WebChat.DAL\obj\Debug\net7.0\WebChat.DAL.csproj.CoreCompileInputs.cache
+D:\.NETProjects\WebChat\WebChat.DAL\obj\Debug\net7.0\WebChat.DAL.dll
+D:\.NETProjects\WebChat\WebChat.DAL\obj\Debug\net7.0\refint\WebChat.DAL.dll
+D:\.NETProjects\WebChat\WebChat.DAL\obj\Debug\net7.0\WebChat.DAL.pdb
+D:\.NETProjects\WebChat\WebChat.DAL\obj\Debug\net7.0\WebChat.DAL.genruntimeconfig.cache
+D:\.NETProjects\WebChat\WebChat.DAL\obj\Debug\net7.0\ref\WebChat.DAL.dll
