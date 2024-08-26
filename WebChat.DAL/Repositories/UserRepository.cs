@@ -37,7 +37,7 @@ public class UserRepository : IUserRepository
       throw new KeyNotFoundException("User not found");
     }
     
-    existingUser.UserId = entity.UserId;
+    existingUser.Username = entity.Username;
     existingUser.Email = entity.Email;
     existingUser.PasswordHash = entity.PasswordHash;
     existingUser.Name = entity.Name;
@@ -61,10 +61,10 @@ public class UserRepository : IUserRepository
     await _appDbContext.SaveChangesAsync();
   }
 
-  public async Task<User?> GetByUserId(string userId)
+  public async Task<User?> GetByUsername(string username)
   {
     return await _appDbContext.Users
-      .SingleOrDefaultAsync(u => u.UserId == userId);
+      .SingleOrDefaultAsync(u => u.Username == username);
   }
 
   public async Task<User?> GetByEmail(string email)

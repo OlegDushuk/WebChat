@@ -1201,6 +1201,19 @@
           }
         }
       },
+      "WebChat.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "WebChat.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebChat.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebChat.BLL.dll": {}
+        }
+      },
       "WebChat.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -3289,6 +3302,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "WebChat.BLL/1.0.0": {
+      "type": "project",
+      "path": "../WebChat.BLL/WebChat.BLL.csproj",
+      "msbuildProject": "../WebChat.BLL/WebChat.BLL.csproj"
+    },
     "WebChat.DAL/1.0.0": {
       "type": "project",
       "path": "../WebChat.DAL/WebChat.DAL.csproj",
@@ -3300,6 +3318,7 @@
       "Microsoft.EntityFrameworkCore >= 7.0.20",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.20",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.20",
+      "WebChat.BLL >= 1.0.0",
       "WebChat.DAL >= 1.0.0"
     ]
   },
@@ -3330,6 +3349,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "D:\\.NETProjects\\WebChat\\WebChat.BLL\\WebChat.BLL.csproj": {
+              "projectPath": "D:\\.NETProjects\\WebChat\\WebChat.BLL\\WebChat.BLL.csproj"
+            },
             "D:\\.NETProjects\\WebChat\\WebChat.DAL\\WebChat.DAL.csproj": {
               "projectPath": "D:\\.NETProjects\\WebChat\\WebChat.DAL\\WebChat.DAL.csproj"
             }

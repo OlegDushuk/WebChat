@@ -11,7 +11,7 @@ public class User
   
   [Required]
   [StringLength(100)]
-  public string? UserId { get; set; }
+  public string? Username { get; set; }
   
   [Required]
   [EmailAddress]

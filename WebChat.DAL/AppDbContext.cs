@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
 using WebChat.DAL.Models;
 
 namespace WebChat.DAL;
@@ -17,7 +16,7 @@ public class AppDbContext : DbContext
     base.OnModelCreating(modelBuilder);
     
     modelBuilder.Entity<User>()
-      .HasIndex(u => u.UserId)
+      .HasIndex(u => u.Username)
       .IsUnique();
     
     modelBuilder.Entity<User>()

@@ -17,6 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\WebChat.BLL\WebChat.BLL.csproj" />
       <ProjectReference Include="..\WebChat.DAL\WebChat.DAL.csproj" />
     </ItemGroup>
 

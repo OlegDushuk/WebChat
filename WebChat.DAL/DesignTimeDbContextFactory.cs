@@ -9,10 +9,10 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<AppDbConte
   public AppDbContext CreateDbContext(string[] args)
   {
     var configuration = new ConfigurationBuilder()
-      .SetBasePath(Directory.GetCurrentDirectory())
+      .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../WebChat.API"))
       .AddJsonFile("appsettings.json")
       .Build();
-
+    
     var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
     
     var connectionString = configuration.GetConnectionString("Db");
