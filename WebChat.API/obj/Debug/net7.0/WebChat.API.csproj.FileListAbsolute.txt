@@ -70,3 +70,17 @@ D:\.NETProjects\WebChat\WebChat.API\obj\Debug\net7.0\refint\WebChat.API.dll
 D:\.NETProjects\WebChat\WebChat.API\obj\Debug\net7.0\WebChat.API.pdb
 D:\.NETProjects\WebChat\WebChat.API\obj\Debug\net7.0\WebChat.API.genruntimeconfig.cache
 D:\.NETProjects\WebChat\WebChat.API\obj\Debug\net7.0\ref\WebChat.API.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Json.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\System.Text.Json.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\WebChat.BLL.dll
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\WebChat.BLL.pdb
+D:\.NETProjects\WebChat\WebChat.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

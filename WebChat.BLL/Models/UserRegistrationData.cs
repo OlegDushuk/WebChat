@@ -1,6 +1,6 @@
 ﻿namespace WebChat.BLL.Models;
 
-public class UserRegisterData
+public class UserRegistrationData
 {
   public string? Email { get; init; }
   public string? Username { get; init; }

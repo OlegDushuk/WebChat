@@ -4,5 +4,5 @@ namespace WebChat.BLL.Interfaces;
 
 public interface IAccountService
 {
-  Task RegisterUserAsync(UserRegisterData data);
+  Task RegisterUserAsync(UserRegistrationData data);
 }

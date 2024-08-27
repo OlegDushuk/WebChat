@@ -1,0 +1,15 @@
+D:\.NETProjects\WebChat\WebChat.BLL\bin\Debug\net7.0\WebChat.BLL.deps.json
+D:\.NETProjects\WebChat\WebChat.BLL\bin\Debug\net7.0\WebChat.BLL.dll
+D:\.NETProjects\WebChat\WebChat.BLL\bin\Debug\net7.0\WebChat.BLL.pdb
+D:\.NETProjects\WebChat\WebChat.BLL\bin\Debug\net7.0\WebChat.DAL.dll
+D:\.NETProjects\WebChat\WebChat.BLL\bin\Debug\net7.0\WebChat.DAL.pdb
+D:\.NETProjects\WebChat\WebChat.BLL\obj\Debug\net7.0\WebChat.BLL.csproj.AssemblyReference.cache
+D:\.NETProjects\WebChat\WebChat.BLL\obj\Debug\net7.0\WebChat.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NETProjects\WebChat\WebChat.BLL\obj\Debug\net7.0\WebChat.BLL.AssemblyInfoInputs.cache
+D:\.NETProjects\WebChat\WebChat.BLL\obj\Debug\net7.0\WebChat.BLL.AssemblyInfo.cs
+D:\.NETProjects\WebChat\WebChat.BLL\obj\Debug\net7.0\WebChat.BLL.csproj.CoreCompileInputs.cache
+D:\.NETProjects\WebChat\WebChat.BLL\obj\Debug\net7.0\WebChat.BLL.csproj.CopyComplete
+D:\.NETProjects\WebChat\WebChat.BLL\obj\Debug\net7.0\WebChat.BLL.dll
+D:\.NETProjects\WebChat\WebChat.BLL\obj\Debug\net7.0\refint\WebChat.BLL.dll
+D:\.NETProjects\WebChat\WebChat.BLL\obj\Debug\net7.0\WebChat.BLL.pdb
+D:\.NETProjects\WebChat\WebChat.BLL\obj\Debug\net7.0\ref\WebChat.BLL.dll

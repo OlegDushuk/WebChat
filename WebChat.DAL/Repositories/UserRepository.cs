@@ -6,32 +6,32 @@ namespace WebChat.DAL.Repositories;
 
 public class UserRepository : IUserRepository
 {
-  private readonly AppDbContext _appDbContext;
+  private readonly AppDbContext _db;
 
-  public UserRepository(AppDbContext appDbContext)
+  public UserRepository(AppDbContext db)
   {
-    _appDbContext = appDbContext;
+    _db = db;
   }
 
   public async Task<User?> Get(string id)
   {
-    return await _appDbContext.Users.FindAsync(id);
+    return await _db.Users.FindAsync(id);
   }
 
   public async Task<List<User>> GetAll()
   {
-    return await _appDbContext.Users.ToListAsync();
+    return await _db.Users.ToListAsync();
   }
 
   public async Task Create(User entity)
   {
-    _appDbContext.Users.Add(entity);
-    await _appDbContext.SaveChangesAsync();
+    _db.Users.Add(entity);
+    await _db.SaveChangesAsync();
   }
 
   public async Task Update(string id, User entity)
   {
-    var existingUser = await _appDbContext.Users.FindAsync(id);
+    var existingUser = await _db.Users.FindAsync(id);
     if (existingUser == null)
     {
       throw new KeyNotFoundException("User not found");
@@ -45,31 +45,31 @@ public class UserRepository : IUserRepository
     existingUser.CreatedAt = entity.CreatedAt;
     existingUser.IaActive = entity.IaActive;
 
-    _appDbContext.Users.Update(existingUser);
-    await _appDbContext.SaveChangesAsync();
+    _db.Users.Update(existingUser);
+    await _db.SaveChangesAsync();
   }
 
   public async Task Delete(string id)
   {
-    var user = await _appDbContext.Users.FindAsync(id);
+    var user = await _db.Users.FindAsync(id);
     if (user == null)
     {
       throw new KeyNotFoundException("User not found");
     }
 
-    _appDbContext.Users.Remove(user);
-    await _appDbContext.SaveChangesAsync();
+    _db.Users.Remove(user);
+    await _db.SaveChangesAsync();
   }
 
   public async Task<User?> GetByUsername(string username)
   {
-    return await _appDbContext.Users
+    return await _db.Users
       .SingleOrDefaultAsync(u => u.Username == username);
   }
 
   public async Task<User?> GetByEmail(string email)
   {
-    return await _appDbContext.Users
+    return await _db.Users
       .SingleOrDefaultAsync(u => u.Email == email);
   }
 }

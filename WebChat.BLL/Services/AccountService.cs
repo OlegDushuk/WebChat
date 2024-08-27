@@ -15,22 +15,19 @@ public class AccountService : IAccountService
     _userRepository = userRepository;
   }
   
-  public async Task RegisterUserAsync(UserRegisterData data)
+  public async Task RegisterUserAsync(UserRegistrationData data)
   {
     if (string.IsNullOrEmpty(data.Email) ||
         string.IsNullOrEmpty(data.Username) ||
         string.IsNullOrEmpty(data.Password))
       throw new InvalidRegistrationDataException("Data is null or empty.");
     
-    var emailTask = _userRepository.GetByEmail(data.Email);
-    var usernameTask = _userRepository.GetByUsername(data.Username);
-
-    await Task.WhenAll(emailTask, usernameTask);
-    
-    if (emailTask.Result != null)
+    var emailTask = await _userRepository.GetByEmail(data.Email);
+    if (emailTask != null)
       throw new EmailAlreadyInUseException(data.Email);
     
-    if (usernameTask.Result != null)
+    var usernameTask = await _userRepository.GetByUsername(data.Username);
+    if (usernameTask != null)
       throw new UsernameAlreadyTakenException(data.Username);
 
     var user = new User
