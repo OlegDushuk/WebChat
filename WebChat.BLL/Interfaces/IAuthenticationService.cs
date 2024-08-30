@@ -1,8 +1,10 @@
-﻿using WebChat.BLL.Models.DTOs;
+﻿using WebChat.BLL.Models;
+using WebChat.BLL.Models.DTOs;
 
 namespace WebChat.BLL.Interfaces;
 
 public interface IAuthenticationService
 {
+  Task<UserDto> AuthenticateUserAsync(UserLoginData data);
   string GetJwtToken(UserDto user, string audience);
 }

@@ -13,6 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 
+// Add http context
+builder.Services.AddHttpContextAccessor();
+
 // Add auth scheme
 builder.Services.AddAuthentication(options =>
   {
@@ -45,6 +48,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.Configure<JwtSettings>(jwtSettings);
 
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 // Add controllers
 builder.Services.AddControllers();

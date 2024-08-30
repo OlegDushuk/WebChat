@@ -20,7 +20,7 @@ public class AccountService : IAccountService
     if (string.IsNullOrEmpty(data.Email) ||
         string.IsNullOrEmpty(data.Username) ||
         string.IsNullOrEmpty(data.Password))
-      throw new InvalidRegistrationDataException("Data is null or empty.");
+      throw new InvalidDataException("Data is null or empty.");
     
     var emailTask = await _userRepository.GetByEmail(data.Email);
     if (emailTask != null)
