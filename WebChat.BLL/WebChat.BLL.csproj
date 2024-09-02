@@ -11,4 +11,8 @@
       <ProjectReference Include="..\WebChat.DAL\WebChat.DAL.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    </ItemGroup>
+
 </Project>

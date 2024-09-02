@@ -1,6 +1,8 @@
 ﻿using WebChat.BLL.Interfaces;
 using WebChat.BLL.Models;
+using WebChat.BLL.Models.Views;
 using WebChat.BLL.Utils.Exceptions.RegistrationExceptions;
+using WebChat.BLL.Utils.Helpers;
 using WebChat.DAL.Interfaces;
 using WebChat.DAL.Models;
 
@@ -35,10 +37,34 @@ public class AccountService : IAccountService
       Id = Guid.NewGuid(),
       Email = data.Email,
       Username = data.Username,
-      PasswordHash = data.Password,
-      CreatedAt = DateTime.Now
+      PasswordHash = PasswordHasher.HashPassword(data.Password),
+      CreatedAt = DateTime.Now,
+      IaActive = true
     };
 
     await _userRepository.Create(user);
+  }
+  
+  public async Task<UserView?> GetUserViewAsync(string username)
+  {
+    var user = await _userRepository.GetByUsername(username);
+    
+    if (user == null)
+      return null;
+    
+    return new UserView
+    {
+      Username = user.Username,
+      Email = user.Email,
+      Name = user.Name,
+      Bio = user.Bio
+    };
+  }
+
+  public async Task DeleteAccount(string username)
+  {
+    var user = await _userRepository.GetByUsername(username);
+    
+    await _userRepository.Delete(user!.Id.ToString());
   }
 }

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebChat.BLL.Interfaces;
 using WebChat.BLL.Models;
-using WebChat.BLL.Utils.Exceptions;
 using WebChat.BLL.Utils.Exceptions.AuthenticateExceptions;
 using WebChat.BLL.Utils.Exceptions.RegistrationExceptions;
 
@@ -47,25 +46,25 @@ public class AuthController : ControllerBase
   }
 
   [HttpPost("login")]
-  public async Task<IActionResult> Login([FromBody] UserLoginData data, string audience)
+  public async Task<IActionResult> Login([FromBody] UserLoginData data)
   {
     try
     {
       var user = await _authenticationServices.AuthenticateUserAsync(data);
-      var token = _authenticationServices.GetJwtToken(user, audience);
+      var token = _authenticationServices.GetJwtToken(user.Username!);
       return Ok(new { token });
     }
     catch (InvalidDataException e)
     {
       return BadRequest(e.Message);
     }
-    catch (UserNotFoundException e)
+    catch (UserNotFoundByEmailException e)
     {
       return NotFound(e.Message);
     }
-    catch (AuthenticationException e)
+    catch (InvalidPasswordException e)
     {
-      return BadRequest(e.Message);
+      return Unauthorized(e.Message);
     }
     catch (Exception e)
     {

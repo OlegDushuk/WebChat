@@ -6,5 +6,5 @@ namespace WebChat.BLL.Interfaces;
 public interface IAuthenticationService
 {
   Task<UserDto> AuthenticateUserAsync(UserLoginData data);
-  string GetJwtToken(UserDto user, string audience);
+  string GetJwtToken(string username);
 }

@@ -10,22 +10,17 @@ public class AuthenticationException : Exception
   }
   
   public AuthenticationException(string message) 
-    : base(FormatMessage(message))
+    : base(message)
   {
   }
 
   public AuthenticationException(string message, Exception innerException)
-    : base(FormatMessage(message), innerException)
+    : base(message, innerException)
   {
   }
 
   protected AuthenticationException(SerializationInfo info, StreamingContext context)
     : base(info, context)
   {
-  }
-  
-  private static string FormatMessage(string message)
-  {
-    return $"An exception occurred during authentication: {message}";
   }
 }
